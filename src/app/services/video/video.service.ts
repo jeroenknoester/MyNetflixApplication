@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders } from '@angular/common/http'
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { IVideo } from 'src/app/interfaces/video';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class VideoService {
 
   constructor(private http:HttpClient) { }
