@@ -1,2 +1,2 @@
 # MyNetflixApplication
-Build a Angular Application from scratch.
+Build a Angular Application from scratch
