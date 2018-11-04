@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { VideotestcomponentComponent } from './components/videotestcomponent/videotestcomponent.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HeadermenuComponent } from './components/headermenu/headermenu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VideotestcomponentComponent
+    VideotestcomponentComponent,
+    HeadermenuComponent
   ],
   imports: [
     BrowserModule, HttpClientModule
