@@ -1,0 +1,169 @@
+.headermenu-container {
+    width: 100%;
+    height: 70px;
+    padding: 0px 70px;
+    background-image: linear-gradient(to top, rgba(0,0,0,0),rgba(34,31,31,0.9));
+    margin: auto;
+    position: fixed;
+    z-index: 100;
+}
+
+.header-logo {
+    width: 112px;
+    height: 100%;
+    padding: 20px 0px;
+    outline: 0;
+    cursor: pointer;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2000px-Netflix_2015_logo.svg.png");
+    background-size: cover;
+}
+
+.header-genre {
+    width: auto;
+    margin-left: 50px;
+    height: 100%;
+}
+
+.header-genre-box {
+    width: auto;
+    height: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.header-genre-font {
+    width: 100%;
+    color: #E50914;
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 70px;
+}
+
+.header-drop {
+    width: auto;
+    height: auto;
+    background-color: rgba(34,31,31,0.5);
+    border-color: rgba(255,255,255,0.5);
+    border-style: solid;
+    border-width: 1px;
+    position: fixed;
+    z-index: 100;
+    margin-top: 70px;
+    margin-left: 230px;
+    cursor: pointer;
+}
+
+.header-item {
+    width: auto;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    float: none;
+}
+
+.header-item:hover {
+    width: auto;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.header-item-font {
+    width: 100%;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 40px;
+}
+
+.header-item-bold {
+    width: 100%;
+    color: #E50914;
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.header-nav {
+    width: 600px;
+    height: 100%;
+    float: right;
+}
+
+.header-profile {
+    width: 30px;
+    height: 100%;
+    padding: 20px 0px;
+    float: right;
+}
+
+
+.profile {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-image: url("https://pro2-bar-s3-cdn-cf1.myportfolio.com/dddb0c1b4ab622854dd81280840458d3/92995677ac0aab719760c33c_rw_600.png?h=c453d5442731bca5c02fcc8a4542af57");
+    background-size: cover;
+}
+
+.custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+  .custom-select select {
+    display: none; /*hide original SELECT element:*/
+  }
+  .select-selected {
+    background-color: DodgerBlue;
+  }
+  /*style the arrow inside the select element:*/
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  /*point the arrow upwards when the select box is open (active):*/
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  /*style the items (options), including the selected item:*/
+  .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+  }
+  /*style items (options):*/
+  .select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+    display: none;
+  }
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
