@@ -1,0 +1,51 @@
+.video {
+    width: 100%;
+    height: 100%;
+    float: none;
+    cursor: pointer;
+}
+
+.video-hover {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    float: none;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.video-hover:hover {
+    background-image: none !important;
+}
+
+.video-line {
+    width: 100%;
+    height: 100%;
+    float: none;
+}
+
+.video-title {
+    width: 100%;
+    height: 40px;
+    float: left;
+}
+
+.video-title-font {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 40px;
+    color: white;
+}
+
+.video-box {
+    width: 20%;
+    height: 210px;
+    padding: 10px 10px 50px 0px;
+    float: left;
+}
