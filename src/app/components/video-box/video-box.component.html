@@ -1,0 +1,19 @@
+<div class="row">
+  <!-- <div class="col-md-8">
+    <msg-add-message (addMessage)="onAddMessage($event)"></msg-add-message>
+  </div> -->
+</div>
+
+<div class="row">
+  <!-- <div class="col-md-8">
+    <msg-message-filter [currentFilter]="filter$ | async" (filterChanged)="onFilterChanged($event)"></msg-message-filter>
+  </div> -->
+</div>
+
+<div class="row">
+ 
+  <div class="col-md">
+    <h2>Filtered videolist (genre: {{genre$}})</h2>
+    <app-video-list [videos]="videos$ | async" [genre]="genre$ | async" (toggleClicked)="onToggleClicked($event)" (deleteClicked)="onDeleteClicked($event)"></app-video-list>
+  </div>
+</div>

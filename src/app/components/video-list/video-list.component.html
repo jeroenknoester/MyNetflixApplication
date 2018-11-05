@@ -1,0 +1,12 @@
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let video of filteredVideos" (click)="onMessageClick(video.id)">
+    <button class="btn btn-secondary" (click)="onToggleButtonClick(video)">Maak gelezen</button>
+
+    <span>{{ video.text }} ({{ video.status }})
+      <!-- <a [routerLink]="['/', message.id]">details tonen</a> -->
+      <a href="#" (click)="onDeleteClick(video.id)">Verwijderen</a>
+    </span>
+  </li>
+
+
+</ul>

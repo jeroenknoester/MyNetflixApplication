@@ -12,6 +12,8 @@ import { SafePipe } from './pipes/safe.pipe';
 import { IAppState } from './store/app-state.interface';
 import { rootReducer } from './store/app.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { VideoBoxComponent } from './components/video-box/video-box.component';
+import { VideoListComponent } from './components/video-list/video-list.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     VideoComponent,
     ThumbnailComponent,
     SafePipe,
+    VideoBoxComponent,
+    VideoListComponent,
 
   ],
   imports: [
