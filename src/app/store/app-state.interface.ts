@@ -1,6 +1,6 @@
 import { Video } from '../shared/models/video.model';
 
 export interface IAppState {
-  filter: string;
+   genre: string;
   videos: Video[];
 }

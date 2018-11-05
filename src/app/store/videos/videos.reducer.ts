@@ -27,8 +27,8 @@ export const videoReducer = (state = initialState, action: VideoActionsUnion) =>
           };
         })
       ];
-    case VideosActionTypes.REMOVE:
-      return state.filter(video => video.id !== action.messageId);
+    // case VideosActionTypes.REMOVE:
+    //   return state.filter(video => video.id !== action.messageId);
     default:
       return state;
   }

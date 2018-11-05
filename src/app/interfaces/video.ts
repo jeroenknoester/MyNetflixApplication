@@ -8,5 +8,4 @@ export interface IVideo {
     description:string;
     genre:IGenre;
     rating:number;
-
 }
