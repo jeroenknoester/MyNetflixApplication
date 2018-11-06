@@ -9,10 +9,10 @@ import { Observable } from 'rxjs';
 
 export class VideoService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   videoUrl = 'http://localhost:8080/api/videos';
-  
+
   headerDict = {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
