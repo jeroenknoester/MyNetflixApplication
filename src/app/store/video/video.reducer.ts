@@ -1,17 +1,18 @@
 import { Video } from '../../shared/video.model';
-import { VideoActionsUnion, VideosActionTypes } from './video.actions';
-const initialState = [
-    new Video(1, 'REDUX?', 'new', true)
-];
+import { VideoActionsUnion, VideoActionTypes } from './video.actions';
+const initialState = [];
 export const videoReducer = (state = initialState, action: VideoActionsUnion) => {
     switch (action.type) {
-        case VideosActionTypes.ADD:
+        case VideoActionTypes.GETALL_SUCCESS:
+            return action.videos;
+
+        case VideoActionTypes.ADD:
             const newId = Math.max(...state.map(video => video.id)) + 1;
             return [
                 ...state,
-                new Video(newId, 'title', 'new', false)
+                // new Video(newId, 'title', 'new', false)
             ];
-        case VideosActionTypes.TOGGLE_STATUS:
+        case VideoActionTypes.TOGGLE_STATUS:
             return [
                 ...state.map(video => {
                     if (video.id !== action.videoId) {
@@ -23,7 +24,7 @@ export const videoReducer = (state = initialState, action: VideoActionsUnion) =>
                     };
                 })
             ];
-        case VideosActionTypes.REMOVE:
+        case VideoActionTypes.REMOVE:
             return state.filter(video => video.id !== action.videoId);
         default:
             return state;

@@ -1,1 +1,5 @@
-<div *ngFor="let video of videos">{{video.title}}</div>
+<div *ngFor="let video of videos | async">
+    <p>
+        {{ video.title }}
+    </p>
+</div>

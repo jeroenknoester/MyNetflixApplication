@@ -30,7 +30,7 @@ import { VideoEffects } from './store/video/video.effects';
     HttpClientModule,
     EffectsModule.forRoot([ VideoEffects ]),
     StoreModule.forRoot<IAppState>(rootReducer),
-    StoreDevtoolsModule
+    StoreDevtoolsModule.instrument()
 
   ],
   providers: [],

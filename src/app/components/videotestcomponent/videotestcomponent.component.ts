@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
+import { Store, select } from '@ngrx/store';
 import { IAppState } from 'src/app/store/app-state.interface';
 import * as videoActions from '../../store/video/video.actions';
+import { Video } from 'src/app/shared/video.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-videotestcomponent',
@@ -10,13 +12,13 @@ import * as videoActions from '../../store/video/video.actions';
 })
 export class VideotestcomponentComponent implements OnInit {
 
-  constructor(private store: Store<IAppState>) { }
+  videos: Observable<Video[]>;
 
-  // Todo: moet hier de type niet bij?
-  videos;
+  constructor(private store: Store<IAppState>) { }
 
   ngOnInit() {
     this.store.dispatch(new videoActions.GetAll());
+    this.videos = this.store.pipe(select(s => s.videos));
 
     // this.service.getVideos().subscribe(data => this.videos = data);
   }
