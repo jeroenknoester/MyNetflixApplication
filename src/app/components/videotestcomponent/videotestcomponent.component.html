@@ -1,5 +1,9 @@
+<div class="error" *ngIf="loadError$ | async">
+    Het gaat helemaal fout!
+</div>
 <div *ngFor="let video of videos | async">
     <p>
         {{ video.title }}
+        <button (click)="this.edit()">Edit</button>
     </p>
 </div>
