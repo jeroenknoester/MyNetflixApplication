@@ -13,8 +13,7 @@ import { VideotestcomponentComponent } from './components/videotestcomponent/vid
 import { SafePipe } from './pipes/safe.pipe';
 import { IAppState } from './store/app-state.interface';
 import { rootReducer } from './store/app.reducer';
-
-
+import { VideoEffects } from './store/video/video.effects';
 
 @NgModule({
   declarations: [

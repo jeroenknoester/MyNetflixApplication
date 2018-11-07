@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { VideoService } from 'src/app/services/video/video.service';
+import { Store } from '@ngrx/store';
+import { IAppState } from 'src/app/store/app-state.interface';
+import * as videoActions from '../../store/video/video.actions';
 
 @Component({
   selector: 'app-videotestcomponent',
@@ -8,13 +10,14 @@ import { VideoService } from 'src/app/services/video/video.service';
 })
 export class VideotestcomponentComponent implements OnInit {
 
-  constructor(private service: VideoService) { }
+  constructor(private store: Store<IAppState>) { }
 
   // Todo: moet hier de type niet bij?
   videos;
 
   ngOnInit() {
-    this.service.getVideos().subscribe(data => this.videos = data);
-  }
+    this.store.dispatch(new videoActions.GetAll());
 
+    // this.service.getVideos().subscribe(data => this.videos = data);
+  }
 }

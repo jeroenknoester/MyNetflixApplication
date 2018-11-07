@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { IVideo } from 'src/app/interfaces/video';
 import { Observable } from 'rxjs';
+import { Video } from 'src/app/shared/video.model';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,7 @@ export class VideoService {
     headers: new HttpHeaders(this.headerDict)
   };
 
-  getVideos(): Observable<IVideo[]> {
-    return this.http.get<IVideo[]>(this.videoUrl, this.requestOptions);
+  getVideos(): Observable<Video[]> {
+    return this.http.get<Video[]>(this.videoUrl, this.requestOptions);
   }
 }
