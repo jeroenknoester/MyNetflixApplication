@@ -1,10 +1,12 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppComponent } from './app.component';
+import { AddVideoComponent } from './components/add-video/add-video.component';
 import { HeadermenuComponent } from './components/headermenu/headermenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { ThumbnailComponent } from './components/video/thumbnail/thumbnail.component';
@@ -15,6 +17,8 @@ import { IAppState } from './store/app-state.interface';
 import { rootReducer } from './store/app.reducer';
 import { VideoEffects } from './store/video/video.effects';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,11 +27,13 @@ import { VideoEffects } from './store/video/video.effects';
     HomeComponent,
     VideoComponent,
     ThumbnailComponent,
-    SafePipe
+    SafePipe,
+    AddVideoComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
     EffectsModule.forRoot([ VideoEffects ]),
     StoreModule.forRoot<IAppState>(rootReducer),
     StoreDevtoolsModule.instrument()
