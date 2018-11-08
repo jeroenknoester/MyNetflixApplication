@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AddVideoComponent } from './components/add-video/add-video.component';
 import { HeadermenuComponent } from './components/headermenu/headermenu.component';
 import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 import { ThumbnailComponent } from './components/video/thumbnail/thumbnail.component';
 import { VideoComponent } from './components/video/video.component';
 import { VideotestcomponentComponent } from './components/videotestcomponent/videotestcomponent.component';
@@ -16,8 +17,8 @@ import { SafePipe } from './pipes/safe.pipe';
 import { IAppState } from './store/app-state.interface';
 import { rootReducer } from './store/app.reducer';
 import { VideoEffects } from './store/video/video.effects';
-
-
+import { AppRoutingModule } from './app-routing.module';
+import { AdminComponent } from './components/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +29,15 @@ import { VideoEffects } from './store/video/video.effects';
     VideoComponent,
     ThumbnailComponent,
     SafePipe,
-    AddVideoComponent
+    AddVideoComponent,
+    LoginComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AppRoutingModule,
     EffectsModule.forRoot([ VideoEffects ]),
     StoreModule.forRoot<IAppState>(rootReducer),
     StoreDevtoolsModule.instrument()

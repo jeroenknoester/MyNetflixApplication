@@ -1,0 +1,17 @@
+<form *ngIf="!isLoggedIn()" [formGroup]="loginForm" (ngSubmit)="login()">
+  <span class="veld">
+    <label for="username">User</label>
+    <input name="username" type="text" formControlName="username"/>
+  </span>
+
+  <span class="veld">
+    <label for="password">Password</label>
+    <input name="password" type="password" formControlName="password" />
+  </span>
+  <button type="submit">Login</button>
+</form>
+
+<div *ngIf="isLoggedIn()">
+  U bent ingelogd als eindbaas
+  <button (click)="logout()">Uitloggen</button>
+</div>
